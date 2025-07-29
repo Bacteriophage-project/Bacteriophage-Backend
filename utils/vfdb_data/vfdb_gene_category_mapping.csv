@@ -1,0 +1,601 @@
+gene,category
+T6SS secreted effectors,Effector delivery system
+Acinetobactin,Nutritional/Metabolic factor
+AdeFGH efflux pump,Biofilm
+Ata,Adherence
+Bap,Biofilm
+BfmRS,Regulation
+Capsule,Immune modulation
+CpaA,Exoenzyme
+Csu fimbriae,Biofilm
+HemO cluster,Nutritional/Metabolic factor
+LPS,Immune modulation
+OmpA,Immune modulation
+PbpG,Immune modulation
+Phospholipase C,Exotoxin
+Phospholipase D,Exotoxin
+PNAG,Biofilm
+Quorom sensing,Biofilm
+T2SS,Effector delivery system
+T6SS,Effector delivery system
+TFP,Adherence
+Aerolysin,Exotoxin
+Exe T2SS,Effector delivery system
+Flp/Tad pili,Adherence
+MSHA type IV pili,Adherence
+Polar flagella,Motility
+RtxA,Exotoxin
+Tap type IV pili,Adherence
+Type I pili,Adherence
+Lateral flagella,Motility
+T3SS,Effector delivery system
+T3SS secreted effectors,Effector delivery system
+AipA,Invasion
+Asp14,Invasion
+OmpA,Invasion
+P44/Msp2 family,Immune modulation
+Rvh T4SS,Effector delivery system
+Rvh T4SS secreted effectors,Effector delivery system
+ALO,Exotoxin
+Anthrax toxin,Exotoxin
+AtxA,Regulation
+BslA,Adherence
+Hal,Nutritional/Metabolic factor
+InhA,Exoenzyme
+Petrobactin,Nutritional/Metabolic factor
+T7SS,Effector delivery system
+Bacillibactin,Nutritional/Metabolic factor
+Cereulide,Exotoxin
+Certhrax,Exotoxin
+Collagenase,Exoenzyme
+CytK,Exotoxin
+HBL,Exotoxin
+IlsA,Nutritional/Metabolic factor
+Nhe,Exotoxin
+Flagella,Motility
+BadA/Vomp,Adherence
+Trw type IV secretion system,Effector delivery system
+VirB/VirD4 T4SS secreted effectors,Effector delivery system
+VirB/VirD4 type IV secretion system,Effector delivery system
+BapC,Adherence
+Brk,Immune modulation
+BvgAS,Regulation
+CyaA/ACT,Exotoxin
+Dnt,Exotoxin
+FHA,Adherence
+Fimbriae,Adherence
+Pertactin,Adherence
+Ptx,Exotoxin
+TcfA,Adherence
+TCT,Exotoxin
+TTSS,Effector delivery system
+TTSS secreted effectors,Effector delivery system
+BB0172,Adherence
+BB0318,Nutritional/Metabolic factor
+BB0323,Others
+BB0406,Adherence
+BBB22-23,Nutritional/Metabolic factor
+BbHtrA,Exoenzyme
+BmpA,Adherence
+BmpD,Nutritional/Metabolic factor
+BmtA,Nutritional/Metabolic factor
+CspA,Immune modulation
+CspZ,Immune modulation
+DbpA/B,Adherence
+ErpA/C/P,Immune modulation
+ErpG,Adherence
+ErpX,Adherence
+GuaA/B,Nutritional/Metabolic factor
+Lmp1,Adherence
+Lon,Exoenzyme
+OspA/B,Adherence
+OspC,Immune modulation
+P66,Adherence
+VlsE,Immune modulation
+BB0238,Others
+BBK32,Immune modulation
+RevA,Adherence
+BigA,Adherence
+BigB,Adherence
+BtpA/Btp1/TcpB,Immune modulation
+BvrR-BvrS,Regulation
+CbetaG,Immune modulation
+T4SS secreted effectors,Effector delivery system
+VirB type IV secretion system,Effector delivery system
+BmaA,Adherence
+BmaB/OmaA,Adherence
+BmaC,Adherence
+BtaE,Adherence
+BtaF,Adherence
+BtpB,Immune modulation
+T6SS-1 secreted effectors,Effector delivery system
+Bsa T3SS secreted effectors,Effector delivery system
+BimA,Motility
+BoaA,Adherence
+BoaB,Adherence
+Bsa T3SS,Effector delivery system
+Capsule I,Immune modulation
+CdpA,Regulation
+Quorum-sensing,Biofilm
+T6SS-1,Effector delivery system
+Type IV pili,Adherence
+CadF,Adherence
+CDT,Exotoxin
+CiaB,Invasion
+CiaC,Invasion
+FlpA,Adherence
+JlpA,Adherence
+LOS,Immune modulation
+MOMP,Adherence
+PEB1,Adherence
+Type IV secretion system,Effector delivery system
+CPAF,Exoenzyme
+Ctad1,Invasion
+OmcB,Adherence
+Pmps,Adherence
+BoNT,Exotoxin
+C2 toxin,Exotoxin
+C3 toxin,Exotoxin
+CbpA,Adherence
+CD0873,Adherence
+CD2831,Adherence
+CD3246,Adherence
+Cwp66,Adherence
+Cwp84,Exoenzyme
+CwpV,Adherence
+FbpA/Fbp68,Adherence
+GroEL,Adherence
+SlpA,Adherence
+TcdA,Exotoxin
+TcdB,Exotoxin
+Zmp1,Exoenzyme
+Alpha-toxin (novyi),Exotoxin
+Alpha-clostripain,Exoenzyme
+Alpha-toxin (CpPLC),Exotoxin
+Beta-toxin (CPB),Exotoxin
+Beta2-toxin,Exotoxin
+CPE,Exotoxin
+Epsilon-toxin (ETX),Exotoxin
+Iota-toxin,Exotoxin
+Kappa-toxin,Exoenzyme
+Mu-toxin,Exoenzyme
+NetB,Exotoxin
+Sialidase,Exoenzyme
+Theta-toxin/PFO,Exotoxin
+Alpha-toxin (septicum),Exotoxin
+TeNT,Exotoxin
+CdiLAM,Adherence
+DIP0733,Adherence
+DIP1281,Adherence
+DIP1621,Adherence
+DIP2093,Adherence
+DT,Exotoxin
+MdbA,Post-translational modification
+SpaA-type pili,Adherence
+Dot/Icm T4SS,Effector delivery system
+Ace,Adherence
+AS,Adherence
+BopD,Biofilm
+Cytolysin,Exotoxin
+Ebp pili,Adherence
+EfaA,Adherence
+Esp,Adherence
+Fsr,Biofilm
+Gelatinase,Exoenzyme
+Hyaluronidase,Exoenzyme
+SprE,Exoenzyme
+Acm,Adherence
+EcbA,Adherence
+Scm,Adherence
+SgrA,Adherence
+Vat,Effector delivery system
+Afa/Dr family,Adherence
+AAFs,Adherence
+Dispersin,Others
+EAST1,Exotoxin
+Pet,Effector delivery system
+Pic,Effector delivery system
+ShET1,Exotoxin
+Chu,Nutritional/Metabolic factor
+ECP,Adherence
+Efa-1/LifA,Effector delivery system
+EspP,Effector delivery system
+Hemolysin,Exotoxin
+Intimin,Effector delivery system
+Ler,Regulation
+Paa,Adherence
+StcE,Exoenzyme
+Stx,Exotoxin
+ToxB,Effector delivery system
+BFP,Adherence
+EspC,Effector delivery system
+Lymphostatin/LifA,Effector delivery system
+Per,Regulation
+Adhesive fimbriae,Adherence
+EtpA,Adherence
+Heat-labile toxin (LT),Exotoxin
+Heat-stable toxin (ST),Exotoxin
+AslA,Invasion
+CNF-1,Exotoxin
+FdeC,Adherence
+Ibes,Invasion
+K1 capsule,Invasion
+S fimbriae,Adherence
+TraJ,Invasion
+Alpha-Hemolysin/HlyA,Exotoxin
+Aerobactin,Nutritional/Metabolic factor
+Curli fibers,Adherence
+Dr adhesins,Adherence
+Enterobactin,Nutritional/Metabolic factor
+F1C fimbriae,Adherence
+P fimbriae,Adherence
+Salmochelin siderophore,Nutritional/Metabolic factor
+Sat,Effector delivery system
+TcpC,Immune modulation
+Tsh,Effector delivery system
+Type 1 fimbriae,Adherence
+Acid phosphatase,Stress survival
+AnsP,Nutritional/Metabolic factor
+ArgP,Nutritional/Metabolic factor
+Biotin synthesis,Nutritional/Metabolic factor
+DipA,Others
+EF-Tu,Adherence
+FmvB,Nutritional/Metabolic factor
+FsaP,Adherence
+FupA,Nutritional/Metabolic factor
+GadC,Nutritional/Metabolic factor
+GGT,Nutritional/Metabolic factor
+IleP,Nutritional/Metabolic factor
+OmpA,Others
+Purine biosynthesis,Nutritional/Metabolic factor
+Pyrimidine biosynthesis,Nutritional/Metabolic factor
+Rhizoferrin,Nutritional/Metabolic factor
+RipA,Others
+Haemagglutinating pili,Adherence
+Hap,Adherence
+Hgp,Nutritional/Metabolic factor
+HhuA,Nutritional/Metabolic factor
+Hia/Hsf,Adherence
+HitABC,Nutritional/Metabolic factor
+HMW1/HMW2,Adherence
+HxuABC,Nutritional/Metabolic factor
+IgA1 protease,Exoenzyme
+OapA,Adherence
+P2 protein,Immune modulation
+P5 protein,Adherence
+Tbp,Nutritional/Metabolic factor
+BabA,Adherence
+CagA,Effector delivery system
+Flagellar glycosylation/Pse biosynthetic pathway,Motility
+HopZ,Adherence
+HP-NAP,Immune modulation
+Lewis antigen,Immune modulation
+OipA,Immune modulation
+SabA,Adherence
+Urease,Stress survival
+VacA,Exotoxin
+AcrAB,Antimicrobial activity/Competitive advantage
+Allantion utilization,Nutritional/Metabolic factor
+Colibactin,Exotoxin
+Ent,Nutritional/Metabolic factor
+RcsAB,Regulation
+RmpA,Regulation
+Sal,Nutritional/Metabolic factor
+Type 3 fimbriae,Biofilm
+Type I fimbriae,Adherence
+Ybt,Nutritional/Metabolic factor
+CcmC,Nutritional/Metabolic factor
+CsrA,Regulation
+Dot/Icm,Effector delivery system
+Enh loci,Others
+FeoAB,Nutritional/Metabolic factor
+FrgA,Nutritional/Metabolic factor
+GspA,Stress survival
+Hsp60,Adherence
+IraAB,Nutritional/Metabolic factor
+KatAB,Stress survival
+Legiobactin,Nutritional/Metabolic factor
+LetA/S,Regulation
+LigA,Effector delivery system
+Lsp T2SS,Effector delivery system
+Mip,Post-translational modification
+Pht,Nutritional/Metabolic factor
+PmiA,Others
+RelA,Regulation
+RpoS,Regulation
+SodB,Stress survival
+SodC,Stress survival
+Dot/Icm T4SS secreted effectors,Effector delivery system
+SMase,Exoenzyme
+ActA,Motility
+Ami,Adherence
+Auto,Invasion
+BSH,Stress survival
+ClpC,Stress survival
+ClpE,Stress survival
+ClpP,Stress survival
+FbpA,Adherence
+GtcA,Post-translational modification
+Hpt,Nutritional/Metabolic factor
+InlA,Invasion
+InlB,Invasion
+InlC,Immune modulation
+InlF,Adherence
+InlJ,Adherence
+InlK,Immune modulation
+InlP,Adherence
+Lap,Adherence
+LapB,Adherence
+LLO,Exotoxin
+LLS,Exotoxin
+LntA,Immune modulation
+LpeA,Invasion
+LplA1,Nutritional/Metabolic factor
+Lsp,Post-translational modification
+Mpl,Exoenzyme
+OatA,Immune modulation
+P60,Invasion
+PgdA,Immune modulation
+PlcA,Exotoxin
+PlcB,Exotoxin
+PrfA,Regulation
+PrsA2,Post-translational modification
+SvpA,Nutritional/Metabolic factor
+Vip,Invasion
+CpnT,Effector delivery system
+EsxG-EsxH,Effector delivery system
+AhpC,Stress survival
+Antigen 85,Adherence
+DevRS,Regulation
+Erp,Others
+ESAT-6/CFP-10,Effector delivery system
+ESX-1,Effector delivery system
+ESX-3,Effector delivery system
+ESX-5,Effector delivery system
+HbhA,Adherence
+HspR,Regulation
+HspX,Stress survival
+IdeR,Regulation
+Isocitrate lyase,Others
+KatG,Stress survival
+LAM,Immune modulation
+LipF,Nutritional/Metabolic factor
+MgtC,Nutritional/Metabolic factor
+MmaA4,Others
+MprAB,Regulation
+Mycobactin,Nutritional/Metabolic factor
+Nitrate reductase,Nutritional/Metabolic factor
+PanC/PanD,Nutritional/Metabolic factor
+PcaA,Others
+PDIM,Immune modulation
+PE/PE-PGRS,Immune modulation
+PhoP,Regulation
+SigA,Regulation
+SigE,Regulation
+SigF,Regulation
+SigH,Regulation
+SodA,Stress survival
+WhiB3,Regulation
+Sulfolipid-1 biosynthesis and transport,Immune modulation
+P97/P102 paralog family,Adherence
+Surface lipoproteins,Immune modulation
+CARDS toxin,Exotoxin
+Cytadherence organelle,Adherence
+RTX protein,Adherence
+FarAB,Antimicrobial activity/Competitive advantage
+FbpABC,Nutritional/Metabolic factor
+FHbp,Immune modulation
+HmbR,Nutritional/Metabolic factor
+HpuAB,Nutritional/Metabolic factor
+IgA1 protease,Effector delivery system
+KatA,Stress survival
+Lbp,Nutritional/Metabolic factor
+MntABC,Stress survival
+MsrAB,Stress survival
+MtrCDE,Antimicrobial activity/Competitive advantage
+NspA,Immune modulation
+Opa,Invasion
+Opc,Invasion
+Porin,Invasion
+RecN,Stress survival
+HSI-1 T6SS secreted effectors,Effector delivery system
+HSI-2 T6SS secreted effectors,Effector delivery system
+Alginate,Biofilm
+Alkaline protease,Exoenzyme
+ExoA,Exotoxin
+Exolysin,Effector delivery system
+Fap,Adherence
+HSI-1,Effector delivery system
+HSI-3 T6SS secreted effectors,Effector delivery system
+LasA,Effector delivery system
+LasB,Effector delivery system
+PLC,Exotoxin
+Pyochelin,Nutritional/Metabolic factor
+Pyocyanin,Nutritional/Metabolic factor
+Pyoverdine,Nutritional/Metabolic factor
+Quorum sensing,Biofilm
+Rhamnolipid,Immune modulation
+Xcp secretion system,Effector delivery system
+HSI-2,Effector delivery system
+HSI-3,Effector delivery system
+RickA,Motility
+ROmpA/Sca0,Adherence
+Adr1,Immune modulation
+Adr2,Immune modulation
+Phospholipase A2,Exotoxin
+Pld,Exotoxin
+ROmpB/Sca5,Invasion
+Sca1,Adherence
+Sca2,Motility
+Sca4,Others
+TlyC,Exoenzyme
+PmrAB,Regulation
+QseBC,Regulation
+SCI T6SS secreted effectors,Effector delivery system
+SsrAB,Regulation
+BapA,Adherence
+TTSS effectors secreted via both systems,Effector delivery system
+TTSS-1 secreted effectors,Effector delivery system
+TTSS-2 secreted effectors,Effector delivery system
+PagN,Invasion
+T4P,Invasion
+Typhoid toxin,Exotoxin
+Vi antigen,Immune modulation
+Agf,Adherence
+ArtAB,Exotoxin
+Fur,Regulation
+Lpf,Adherence
+MgtB,Nutritional/Metabolic factor
+Mig-14,Antimicrobial activity/Competitive advantage
+Mig-5,Antimicrobial activity/Competitive advantage
+MisL,Adherence
+Pef,Adherence
+PhoPQ,Regulation
+RatB,Adherence
+Rck,Invasion
+SCI (Salmonella centrisome island)/SPI-6 T6SS,Effector delivery system
+ShdA,Adherence
+SiiE,Adherence
+SinH,Adherence
+SodCI,Stress survival
+TTSS (SPI-1 encode),Effector delivery system
+TTSS (SPI-2 encode),Effector delivery system
+DsbA,Post-translational modification
+VirF,Regulation
+Shu,Nutritional/Metabolic factor
+Shiga toxin,Exotoxin
+IcsA (VirG),Motility
+IcsP (SopA),Exoenzyme
+Pic,Exoenzyme
+ShET2,Exotoxin
+SigA,Exoenzyme
+Alpha-hemolysin,Exotoxin
+Beta-hemolysin,Exotoxin
+Delta-hemolysin,Exotoxin
+Gamma-hemolysin,Exotoxin
+AdsA,Immune modulation
+Aureolysin,Exoenzyme
+CHIPS,Immune modulation
+Clumping factor,Adherence
+CNA,Adherence
+Eap/Map,Adherence
+EbpS,Adherence
+Exfoliative toxin,Exoenzyme
+FnBPs,Adherence
+Hyaluronate lyase,Exoenzyme
+Intercellular adhesion proteins,Biofilm
+Isd,Nutritional/Metabolic factor
+Lipase,Exoenzyme
+PVL,Exotoxin
+Sbi,Immune modulation
+SCIN,Immune modulation
+SDr,Adherence
+SE,Exotoxin
+SpA,Exotoxin
+SSLs,Exotoxin
+Staphopain,Exoenzyme
+Staphylocoagulase,Exoenzyme
+Staphylokinase,Exoenzyme
+TSST-1,Exotoxin
+Type VII secretion system,Effector delivery system
+V8 protease,Exoenzyme
+VWbp,Exoenzyme
+Alpha-C protein,Invasion
+Beta-C protein,Immune modulation
+Beta-haemolysin/cytolysin,Exotoxin
+C5a peptidase,Adherence
+CAMP factor,Exotoxin
+FbsA,Adherence
+FbsB,Adherence
+Lmb,Adherence
+PI-1,Adherence
+PI-2a,Adherence
+SpaP,Adherence
+Autolysin,Exoenzyme
+CbpA/PspC,Adherence
+CBPs,Adherence
+IgA1 protease,Immune modulation
+Neuraminidase,Exoenzyme
+PavA,Adherence
+PavB,Adherence
+PfbA,Adherence
+PI-2,Adherence
+Pneumolysin,Exotoxin
+PsaA,Nutritional/Metabolic factor
+PspA,Immune modulation
+RlrA islet,Adherence
+FBPs,Adherence
+GAS pili,Adherence
+GRAB,Others
+Hyaluronic acid capsule,Immune modulation
+IdeS,Immune modulation
+M protein,Immune modulation
+Mitogenic factor,Exoenzyme
+SIC,Immune modulation
+SLO,Exotoxin
+SLS,Exotoxin
+SpeB,Exoenzyme
+Spes,Exotoxin
+Streptokinase,Exoenzyme
+HlyU,Regulation
+T3SS1 secreted effectors,Effector delivery system
+T3SS2 secreted effectors,Effector delivery system
+VAS T6SS secreted effectors,Effector delivery system
+Ace,Exotoxin
+ACF,Others
+AI-2,Biofilm
+Bap1,Biofilm
+CAI-1,Biofilm
+ChxA,Exotoxin
+CT,Exotoxin
+Eps T2SS,Effector delivery system
+GbpA,Adherence
+HAP,Exoenzyme
+MARTX,Exotoxin
+MSHA pili,Adherence
+NanH/VCNA,Exoenzyme
+RbmA,Biofilm
+RbmC,Biofilm
+TCP,Adherence
+VAS T6SS,Effector delivery system
+VCC,Exotoxin
+VPS,Biofilm
+Zot,Exotoxin
+MAM7,Adherence
+PirAB,Exotoxin
+T3SS1,Effector delivery system
+T3SS2,Effector delivery system
+TDH,Exotoxin
+TLH,Exotoxin
+TRH,Exotoxin
+VpadF,Adherence
+ChiRP,Adherence
+Flp2/Tad2 pili,Adherence
+IlpA,Adherence
+OmpU,Adherence
+VvhA,Exotoxin
+O-antigen,Immune modulation
+YaxAB,Exotoxin
+YplA,Exotoxin
+Ysa TTSS effectors,Effector delivery system
+Yst,Exotoxin
+Yst1 T2SS,Effector delivery system
+Ysa TTSS,Effector delivery system
+Ail,Invasion
+F1 antigen,Immune modulation
+Invasin,Invasion
+Myf/pH6 antigen,Adherence
+Pla,Exoenzyme
+YadA,Effector delivery system
+YapC,Adherence
+YapE,Adherence
+YapJ,Adherence
+YapK,Adherence
+YapV,Adherence
+Yersiniabactin,Nutritional/Metabolic factor
+Ymt,Exotoxin
+CNFy,Exotoxin
+Invasin B/Ifp,Invasion
+Invasin C/Ilp,Invasion
+Invasin D,Invasion
+YPM,Exotoxin
