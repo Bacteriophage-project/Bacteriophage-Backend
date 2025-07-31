@@ -722,14 +722,63 @@ const Dashboard = () => {
                           </Alert>
                         )}
                         {isCompleted && (
-                          <Button
-                            variant="outlined"
-                            fullWidth
-                            sx={{ mt: 1 }}
+                          <button
+                            className="download-results-button"
+                            style={{
+                              width: '100%',
+                              marginTop: '8px',
+                              padding: '12px 20px',
+                              backgroundColor: '#1976d2',
+                              color: 'white',
+                              border: 'none',
+                              borderRadius: '8px',
+                              fontSize: '14px',
+                              fontWeight: '600',
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              gap: '10px',
+                              boxShadow: '0 2px 8px rgba(25, 118, 210, 0.3)',
+                              outline: 'none',
+                              textDecoration: 'none',
+                              textTransform: 'none',
+                              minHeight: '44px',
+                              transition: 'all 0.2s ease-in-out',
+                              position: 'relative',
+                              overflow: 'hidden',
+                            }}
+                            onMouseOver={(e) => {
+                              const target = e.target as HTMLButtonElement;
+                              target.style.backgroundColor = '#1565c0';
+                              target.style.boxShadow = '0 4px 12px rgba(25, 118, 210, 0.4)';
+                              target.style.transform = 'translateY(-1px)';
+                            }}
+                            onMouseOut={(e) => {
+                              const target = e.target as HTMLButtonElement;
+                              target.style.backgroundColor = '#1976d2';
+                              target.style.boxShadow = '0 2px 8px rgba(25, 118, 210, 0.3)';
+                              target.style.transform = 'translateY(0)';
+                            }}
+                            onMouseDown={(e) => {
+                              const target = e.target as HTMLButtonElement;
+                              target.style.transform = 'translateY(0)';
+                              target.style.boxShadow = '0 1px 4px rgba(25, 118, 210, 0.3)';
+                            }}
+                            onMouseUp={(e) => {
+                              const target = e.target as HTMLButtonElement;
+                              target.style.transform = 'translateY(-1px)';
+                              target.style.boxShadow = '0 4px 12px rgba(25, 118, 210, 0.4)';
+                            }}
                             onClick={() => handleManualDownload(type, job.job_id)}
                           >
+                            <DownloadIcon style={{ 
+                              fontSize: '18px', 
+                              color: 'white',
+                              transition: 'transform 0.2s ease-in-out'
+                            }} />
                             Download Results
-                          </Button>
+                          </button>
                         )}
                       </CardContent>
                     </Card>
@@ -750,10 +799,16 @@ const Dashboard = () => {
                 PHASTEST Zip Files ({phastestZipFiles.length})
               </Typography>
               <Button
-                variant="outlined"
+                variant="contained"
                 onClick={handleDownloadPhastestZip}
                 startIcon={<DownloadIcon />}
                 disabled={loadingZipFiles}
+                sx={{
+                  borderRadius: '8px',
+                  textTransform: 'none',
+                  fontSize: '0.875rem',
+                  fontWeight: 500,
+                }}
               >
                 Download All ZIP Files
               </Button>
@@ -819,10 +874,16 @@ const Dashboard = () => {
                       </TableCell>
                       <TableCell align="center">
                         <Button
-                          variant="outlined"
+                          variant="contained"
                           size="small"
                           onClick={() => handleDownloadTempFastaZip(file.temp_dir, file.filename)}
                           startIcon={<DownloadIcon />}
+                          sx={{
+                            borderRadius: '6px',
+                            textTransform: 'none',
+                            fontSize: '0.75rem',
+                            fontWeight: 500,
+                          }}
                         >
                           Download
                         </Button>

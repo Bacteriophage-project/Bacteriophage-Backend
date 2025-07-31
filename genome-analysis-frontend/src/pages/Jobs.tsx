@@ -15,7 +15,6 @@ import {
   Refresh as RefreshIcon,
   Delete as DeleteIcon,
   Download as DownloadIcon,
-  Pause as PauseIcon,
   PlayArrow as PlayArrowIcon,
   Stop as StopIcon,
 } from '@mui/icons-material';
@@ -184,18 +183,26 @@ const Jobs = () => {
         const isAnalysisJob = ['resfinder', 'phastest', 'vfdb'].includes(job.job_type);
         const isCompleted = job.status === 'completed';
         const isRunning = job.status === 'running';
-        const isPending = job.status === 'pending';
         const isPaused = job.status === 'paused';
         return (
           <Box sx={{ display: 'flex', gap: 1 }}>
             {isAnalysisJob && isCompleted && (
-              <IconButton
+              <Button
                 size="small"
+                variant="contained"
                 onClick={() => handleDownload(job.job_id, `${job.job_type}_csv`)}
-                title="Download CSV Results"
+                startIcon={<DownloadIcon />}
+                sx={{
+                  borderRadius: '8px',
+                  textTransform: 'none',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  minWidth: 'auto',
+                  padding: '6px 12px',
+                }}
               >
-                <DownloadIcon />
-              </IconButton>
+                Download
+              </Button>
             )}
             {job.job_type === 'phastest' && isCompleted && (
               <IconButton

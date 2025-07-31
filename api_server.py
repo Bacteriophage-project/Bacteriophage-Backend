@@ -30,7 +30,7 @@ class JobStatus:
 from utils.ncbi_fetcher import get_genomes_from_bioproject
 from utils.run_resfinder import run_resfinder
 from utils.download_genomes import download_and_decompress_fasta
-from utils.vfdb_blast import build_blast_db, aggregate_results
+from utils.vfdb_blast import build_blast_db, aggregate_results, create_category_matrix
 from utils.vfdb_excel_formatter import format_vfdb_matrix
 from utils.run_phastest import submit_and_download_phastest, parse_phastest_zip_folder
 
@@ -669,6 +669,10 @@ def run_vfdb_api():
                 matrix_csv = os.path.join(output_dir, "vfdb_matrix.csv")
                 aggregate_results(fasta_paths, matrix_csv, output_dir=output_dir)
                 
+                # Create category matrix
+                category_csv = os.path.join(output_dir, "vfdb_category_matrix.csv")
+                create_category_matrix(fasta_paths, category_csv, output_dir=output_dir)
+                
                 # Format Excel output
                 mapping_csv = os.path.join("utils", "vfdb_data", "vfdb_gene_category_mapping.csv")
                 excel_out = os.path.join(output_dir, "vfdb_matrix_formatted.xlsx")
@@ -679,6 +683,7 @@ def run_vfdb_api():
                     results = {
                         "excel_path": excel_out,
                         "csv_path": matrix_csv,
+                        "category_csv_path": category_csv,
                         "message": "VFDB analysis completed successfully"
                     }
                     jobs[job_id].status = "completed"
@@ -799,6 +804,13 @@ def download_file(job_id, file_type):
             
             print(f"VFDB file path: {file_path}")
             print(f"File exists: {os.path.exists(file_path)}")
+        elif file_type == "vfdb_category_csv" and job.job_type == "vfdb":
+            # For VFDB category matrix
+            file_path = job.result.get("category_csv_path")
+            if not file_path or not os.path.exists(file_path):
+                # Try alternative path
+                output_dir = f"vfdb_results/{job_id}"
+                file_path = os.path.join(output_dir, "vfdb_category_matrix.csv")
         else:
             return jsonify({"error": "Invalid file type"}), 400
         

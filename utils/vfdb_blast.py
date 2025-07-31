@@ -128,4 +128,92 @@ def aggregate_results(genome_fasta_list, output_matrix_csv, output_dir=None):
     meta_cols = ["GENOME", "Prophage", "Host genus", "KB", "GC%", "First gene"]
     df = pd.DataFrame(results, columns=meta_cols + gene_order)
     df.to_csv(output_matrix_csv, index=False)
-    return output_matrix_csv 
+    return output_matrix_csv
+
+def create_category_matrix(genome_fasta_list, output_category_csv, output_dir=None):
+    """
+    Create a category matrix where both rows and columns are virulence factor categories.
+    The matrix shows presence (1) or absence (0) of each category for each genome.
+    """
+        # Define the specific categories you want
+    target_categories = [
+        'Adherence',
+        'Motility', 
+        'Regulation',
+        'Nutritional/Metabolic factor',
+        'Effector delivery system',
+        'Exotoxin',
+        'Immune modulation',
+        'Antimicrobial activity/Competitive advantage',
+        'Exoenzyme',
+        'Biofilm'
+    ]
+
+    # Load mapping from new mapping file (short gene symbol, category)
+    mapping = pd.read_csv(os.path.join(VFDB_DIR, 'vfdb_gene_category_mapping.csv'))
+
+    # Create a mapping from gene to category
+    gene_to_category = dict(zip(mapping['gene'], mapping['category']))
+
+    fasta_gene_map = build_fasta_gene_map()
+    results = []
+
+    for genome in genome_fasta_list:
+        out_file = os.path.join(output_dir or '', os.path.basename(genome) + ".vfdb_blast.tsv")
+        run_blast(genome, out_file)
+        gene_counts = parse_blast_output_gene_names(out_file, fasta_gene_map)
+
+                # Create category presence vector
+        category_presence = {}
+        secretion_present = False
+        
+        for gene, count in gene_counts.items():
+            if count > 0:  # Gene is present
+                category = gene_to_category.get(gene)
+                if category in target_categories:
+                    category_presence[category] = 1
+                
+                # Check for secretion systems (genes containing "secretion")
+                if 'secretion' in gene.lower():
+                    secretion_present = True
+        
+        # Fill in 0 for categories not present
+        for category in target_categories:
+            if category not in category_presence:
+                category_presence[category] = 0
+        
+        # Add secretion system category
+        category_presence['Secretion system'] = 1 if secretion_present else 0
+
+        acc = extract_accession_from_filename(genome)
+        genus, kb, gc_pct = parse_fasta_metadata(genome)
+
+        # Create row with genome info and category presence
+        all_categories = target_categories + ['Secretion system']
+        row = [acc, genus, kb, gc_pct] + [category_presence[cat] for cat in all_categories]
+        results.append(row)
+
+    # Create DataFrame
+    meta_cols = ["GENOME", "Host genus", "KB", "GC%"]
+    all_categories = target_categories + ['Secretion system']
+    df = pd.DataFrame(results, columns=meta_cols + all_categories)
+
+    # Save the category matrix
+    df.to_csv(output_category_csv, index=False)
+
+        # Also create a summary matrix showing category-to-category relationships
+    # This creates a matrix where both rows and columns are categories
+    category_summary = {}
+    for category in all_categories:
+        category_summary[category] = {}
+        for other_category in all_categories:
+            # Count how many genomes have both categories present
+            both_present = sum(1 for row in results if row[meta_cols.index("GENOME") + all_categories.index(category) + 1] == 1 
+                             and row[meta_cols.index("GENOME") + all_categories.index(other_category) + 1] == 1)
+            category_summary[category][other_category] = both_present
+
+    summary_df = pd.DataFrame(category_summary)
+    summary_csv = output_category_csv.replace('.csv', '_summary.csv')
+    summary_df.to_csv(summary_csv)
+
+    return output_category_csv, summary_csv 

@@ -137,13 +137,22 @@ const Results = () => {
         return (
           <Box sx={{ display: 'flex', gap: 1 }}>
             {isAnalysisJob && (
-              <IconButton
+              <Button
                 size="small"
+                variant="contained"
                 onClick={() => handleDownload(job.job_id, `${job.job_type}_csv`)}
-                title="Download CSV Results"
+                startIcon={<DownloadIcon />}
+                sx={{
+                  borderRadius: '8px',
+                  textTransform: 'none',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  minWidth: 'auto',
+                  padding: '6px 12px',
+                }}
               >
-                <DownloadIcon />
-              </IconButton>
+                Download
+              </Button>
             )}
             {job.job_type === 'phastest' && (
               <IconButton

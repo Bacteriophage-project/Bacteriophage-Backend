@@ -13,14 +13,20 @@ import multiprocessing
 
 
 def parse_fasta_header(fasta_path):
-    """Extract accession and genus from the first header line of a FASTA file."""
+    """Extract accession and genus+species from the first header line of a FASTA file."""
     with open(fasta_path, 'r') as f:
         for line in f:
             if line.startswith('>'):
                 parts = line[1:].split()
                 accession = parts[0]
-                genus = parts[1] if len(parts) > 1 else ''
-                return accession, genus
+                # Extract genus and species (first two words after accession)
+                if len(parts) >= 3:
+                    genus_species = f"{parts[1]} {parts[2]}"
+                elif len(parts) == 2:
+                    genus_species = parts[1]
+                else:
+                    genus_species = ''
+                return accession, genus_species
     return '', ''
 
 def parse_resfinder_results_table(table_path):
@@ -41,8 +47,9 @@ def parse_resfinder_results_table(table_path):
             elif current_class and not line.startswith('Resistance gene'):
                 parts = line.split('\t')
                 if parts and parts[0] != 'No hit found':
-                    genes_by_class[current_class].add(parts[0])
-                    gene_hits.add((current_class, parts[0]))
+                    clean_gene = clean_gene_name(parts[0])
+                    genes_by_class[current_class].add(clean_gene)
+                    gene_hits.add((current_class, clean_gene))
     return genes_by_class, gene_hits
 
 def parse_resfinder_results_txt(txt_path):
@@ -64,18 +71,53 @@ def parse_resfinder_results_txt(txt_path):
             elif current_class and ',' in line and 'ID:' in line:
                 # e.g. 'aph(6)-Id, ID: 99.88 %, ...'
                 gene = line.split(',')[0].strip()
-                genes_by_class[current_class].add(gene)
+                clean_gene = clean_gene_name(gene)
+                genes_by_class[current_class].add(clean_gene)
     return genes_by_class
+
+def clean_gene_name(gene_name):
+    """Extract clean gene name from database gene name."""
+    # Remove accession numbers and other suffixes
+    # Examples: blaBEL4_1_KX388629 -> blaBEL-4, blaCTX-M-64_1_AB284167 -> blaCTX-M-64
+    
+    # Split by underscore and take the first part
+    clean_name = gene_name.split('_')[0]
+    
+    # Handle special cases for gene names with numbers
+    # Convert patterns like blaBEL4 to blaBEL-4
+    import re
+    
+    # Handle patterns like blaBEL4 -> blaBEL-4
+    match = re.match(r'([a-zA-Z]+)(\d+)$', clean_name)
+    if match:
+        prefix, number = match.groups()
+        clean_name = f"{prefix}-{number}"
+    
+    # Handle patterns like blaCTX-M64 -> blaCTX-M-64 (add dash before number)
+    match = re.match(r'([a-zA-Z-]+)(\d+)$', clean_name)
+    if match:
+        prefix, number = match.groups()
+        if not prefix.endswith('-'):
+            clean_name = f"{prefix}-{number}"
+    
+    # Handle patterns like blaCTX-M-64 (already correct)
+    # No change needed
+    
+    return clean_name
 
 def get_all_class_gene_pairs_from_db(db_dir):
     class_gene_pairs = set()
     for fasta_file in Path(db_dir).glob('*.fsa'):
+        # Skip the all.fsa file to avoid creating an "All" class
+        if fasta_file.name == 'all.fsa':
+            continue
         class_name = fasta_file.stem.replace('_', ' ').capitalize()
         with open(fasta_file, 'r') as f:
             for line in f:
                 if line.startswith('>'):
                     gene = line[1:].split()[0]
-                    class_gene_pairs.add((class_name, gene))
+                    clean_gene = clean_gene_name(gene)
+                    class_gene_pairs.add((class_name, clean_gene))
     return class_gene_pairs
 
 def process_one_genome(genome, db_path, output_dir, blast_path):
@@ -96,7 +138,7 @@ def process_one_genome(genome, db_path, output_dir, blast_path):
                 "--blastPath", blast_path,
                 "-db_res", db_path
             ], cwd=Path.cwd(), check=True)
-        accession, _ = parse_fasta_header(fasta_path)
+        accession, genus_species = parse_fasta_header(fasta_path)
         table_file = None
         for f in result_dir.iterdir():
             if f.is_file() and f.name.lower().startswith('resfinder_results_table'):
@@ -110,7 +152,7 @@ def process_one_genome(genome, db_path, output_dir, blast_path):
             genes_by_class = parse_resfinder_results_txt(txt_file)
         return {
                 'accession': accession,
-            'genus': provided_genus,
+            'genus': genus_species,
             'genes_by_class': genes_by_class,
             'url': url
         }
@@ -145,9 +187,10 @@ def run_resfinder(genome_list, output_file="resfinder_output.csv"):
                 for gene in genes:
                     found_class_gene_pairs.add((cls, gene))
 
-    # Only keep columns for genes found in at least one genome
+    # Only use found class/gene pairs - only include columns for genes that are actually present
     class_gene_columns = sorted(found_class_gene_pairs, key=lambda x: (x[0], x[1]))
-    # Build a list of unique classes in order
+    
+    # Build a list of unique classes in order (only for classes that have found genes)
     classes = []
     genes_by_class_ordered = {}
     for cls, gene in class_gene_columns:
@@ -155,26 +198,39 @@ def run_resfinder(genome_list, output_file="resfinder_output.csv"):
             classes.append(cls)
             genes_by_class_ordered[cls] = []
         genes_by_class_ordered[cls].append(gene)
-    # First header: class names, spanning the number of genes in each class
-    header_class = ["ACCESION No.", "GENUS"]
-    for cls in classes:
-        header_class.extend([cls] + [""] * (len(genes_by_class_ordered[cls]) - 1))
-    # Second header: gene names
-    header_gene = ["", ""]
-    for cls in classes:
-        header_gene.extend(genes_by_class_ordered[cls])
+    
+    # Get all possible antibiotic classes from the database for consistent headers
+    all_classes = set()
+    for cls, _ in all_class_gene_pairs:
+        all_classes.add(cls)
+    all_classes = sorted(all_classes)
+    
+    if not classes:
+        # No genes found, but show all antibiotic class headers with "None" values
+        header = ["ACCESION No.", "GENUS"]
+        for cls in all_classes:
+            header.extend([cls])
+    else:
+        # Single header: class names, spanning the number of genes in each class
+        header = ["ACCESION No.", "GENUS"]
+        for cls in classes:
+            header.extend([cls] + [""] * (len(genes_by_class_ordered[cls]) - 1))
+    
     with output_path.open("w", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(header_class)
-        writer.writerow(header_gene)
+        writer.writerow(header)
         for row in results:
             row_data = [row['accession'], row['genus']]
-            gene_presence = []
-            for cls in classes:
-                for gene in genes_by_class_ordered[cls]:
-                    present = gene if (cls in row['genes_by_class'] and gene in row['genes_by_class'][cls]) else ''
-                    gene_presence.append(present)
-                    
-            writer.writerow(row_data + gene_presence)
+            if classes:
+                gene_presence = []
+                for cls in classes:
+                    for gene in genes_by_class_ordered[cls]:
+                        present = gene if (cls in row['genes_by_class'] and gene in row['genes_by_class'][cls]) else ''
+                        gene_presence.append(present)
+                writer.writerow(row_data + gene_presence)
+            else:
+                # No genes found, add "None" for each antibiotic class
+                none_values = ["None"] * len(all_classes)
+                writer.writerow(row_data + none_values)
     return str(output_path)
 
