@@ -1,4 +1,4 @@
-# Bacteriophage-Backend-
+# Bacteriophage-Backend
 # Overview
 This backend is a unified API service built with FastAPI to support bacterial genome analysis workflows. It enables fetching of genome assemblies from NCBI based on BioProject IDs, downloads and manages genomic FASTA files, and prepares structured data for frontend display or downstream analyses including antimicrobial resistance and virulence factor identification.
 
