@@ -1,0 +1,118 @@
+vfg_id,vfid,gene,category
+VFG037573,,(csuA) Csu pilus subunit CsuA,Unknown
+VFG037650,,"(pgaA) poly-beta-1,6 N-acetyl-D-glucosamine export porin PgaA",Unknown
+VFG038032,,(ACICU_RS00455*) EpsG family protein,Unknown
+VFG038077,,(ACICU_RS00470*) glycosyltransferase,Unknown
+VFG038356,,(aopX) hypothetical protein,Unknown
+VFG038735,,(flaB) flagellin,Unknown
+VFG038968,,(virB4-t1) type IV secretion system protein VirB4,Unknown
+VFG045351,,(APH_RS00640*) P44/Msp2 family outer membrane protein,Unknown
+VFG045352,,(APH_RS00650*) P44/Msp2 family outer membrane protein,Unknown
+VFG045354,,(APH_RS00655*) P44/Msp2 family outer membrane protein,Unknown
+VFG045356,,(APH_RS05935*) P44/Msp2 family outer membrane protein,Unknown
+VFG045358,,(APH_RS06255*) P44/Msp2 family outer membrane protein,Unknown
+VFG045363,,(APH_RS03720*) P44/Msp2 family outer membrane protein,Unknown
+VFG045364,,(APH_RS04270*) P44/Msp2 family outer membrane protein,Unknown
+VFG045366,,(APH_RS06070*) P44/Msp2 family outer membrane protein,Unknown
+VFG045367,,(APH_RS04480*) P44/Msp2 family outer membrane protein,Unknown
+VFG045380,,(APH_RS05130*) P44/Msp2 family outer membrane protein,Unknown
+VFG045382,,(APH_RS06120*) P44/Msp2 family outer membrane protein,Unknown
+VFG045389,,(APH_RS05905*) P44/Msp2 family outer membrane protein,Unknown
+VFG045392,,(APH_RS00590*) P44/Msp2 family outer membrane protein,Unknown
+VFG045397,,(APH_RS06265*) P44/Msp2 family outer membrane protein,Unknown
+VFG045398,,(APH_RS06280*) P44/Msp2 family outer membrane protein,Unknown
+VFG045401,,(APH_RS03560*) P44/Msp2 family outer membrane protein,Unknown
+VFG045404,,(APH_RS03710*) P44/Msp2 family outer membrane protein,Unknown
+VFG045405,,(APH_RS03715*) hypothetical protein,Unknown
+VFG045406,,(APH_RS06535*) P44/Msp2 family outer membrane protein,Unknown
+VFG045410,,(APH_RS04035*) P44/Msp2 family outer membrane protein,Unknown
+VFG045412,,(APH_RS06745*) P44/Msp2 family outer membrane protein,Unknown
+VFG045415,,(APH_RS04280*) P44/Msp2 family outer membrane protein,Unknown
+VFG045416,,(APH_RS04295*) P44/Msp2 family outer membrane protein,Unknown
+VFG045417,,(APH_RS04300*) P44/Msp2 family outer membrane protein,Unknown
+VFG045419,,(APH_RS04440*) P44/Msp2 family outer membrane protein,Unknown
+VFG045420,,(APH_RS04450*) P44/Msp2 family outer membrane protein,Unknown
+VFG045421,,(APH_RS06605*) P44/Msp2 family outer membrane protein,Unknown
+VFG045423,,(APH_RS04475*) P44/Msp2 family outer membrane protein,Unknown
+VFG045427,,(APH_RS04665*) P44/Msp2 family outer membrane protein,Unknown
+VFG045429,,(APH_RS04760*) P44/Msp2 family outer membrane protein,Unknown
+VFG045430,,(APH_RS06100*) P44/Msp2 family outer membrane protein,Unknown
+VFG045433,,(APH_RS04825*) P44/Msp2 family outer membrane protein,Unknown
+VFG045435,,(APH_RS06105*) P44/Msp2 family outer membrane protein,Unknown
+VFG045436,,(APH_RS04965*) P44/Msp2 family outer membrane protein,Unknown
+VFG045442,,(APH_RS05070*) P44/Msp2 family outer membrane protein,Unknown
+VFG045443,,(APH_RS05095*) P44/Msp2 family outer membrane protein,Unknown
+VFG045444,,(APH_RS05150*) P44/Msp2 family outer membrane protein,Unknown
+VFG045445,,(APH_RS06665*) P44/Msp2 family outer membrane protein,Unknown
+VFG045446,,(APH_RS05325*) P44/Msp2 family outer membrane protein,Unknown
+VFG045447,,(APH_RS05330*) P44/Msp2 family outer membrane protein,Unknown
+VFG045449,,(APH_RS06140*) P44/Msp2 family outer membrane protein,Unknown
+VFG045450,,(APH_RS05400*) P44/Msp2 family outer membrane protein,Unknown
+VFG045451,,(APH_RS06145*) P44/Msp2 family outer membrane protein,Unknown
+VFG045455,,(APH_RS05500*) P44/Msp2 family outer membrane protein,Unknown
+VFG045456,,(APH_RS05505*) P44/Msp2 family outer membrane protein,Unknown
+VFG045457,,(APH_RS05655*) P44/Msp2 family outer membrane protein,Unknown
+VFG045458,,(APH_RS05660*) P44/Msp2 family outer membrane protein,Unknown
+VFG045459,,(APH_RS05665*) P44/Msp2 family outer membrane protein,Unknown
+VFG045460,,(APH_RS06180*) P44/Msp2 family outer membrane protein,Unknown
+VFG040866,,(BAS_RS10590*) type VII secretion system protein,Unknown
+VFG000006,,(fimA) fimbrial protein,Unknown
+VFG011140,,(bplJ) hypothetical protein,Unknown
+VFG012115,,(cdtB) CdtB,Unknown
+VFG039221,,(CBU_0012*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039263,,"(ankB) Coxiella Dot/Icm type IVB secretion system translocated effector, ankyrin repeat-containing protein",Unknown
+VFG039297,,(CBU_0344*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039306,,(CBU_0375*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039392,,(coxU1) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039415,,(ankH) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039436,,(CBU_1107*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039441,,(CBU_1150*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039469,,(coxK2) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039479,,(coxDFB3) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039506,,(coxCC8) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039517,,(CBU_1525*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039610,,(ankM/cig58) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG039686,,(CBU_2059*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG046152,,"(ankP) Coxiella Dot/Icm type IVB secretion system translocated effector, ankyrin repeat protein",Unknown
+VFG046169,,(CBU_0820*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG046172,,(CBU_1048*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG046191,,(CBU_1495*) Coxiella Dot/Icm type IVB secretion system translocated effector,Unknown
+VFG034739,,(tccP2) Tir-cytoskeleton coupling protein TccP2,Unknown
+VFG034756,,(espL1) Type III secretion system effector espL1,Unknown
+VFG034795,,(espN) Type III secretion system effector EspN,Unknown
+VFG034832,,(espR4) Type III secretion system effector espR4,Unknown
+VFG034842,,(espW) Type III secretion system effector EspW,Unknown
+VFG034997,,(nleG2-4) DUF1076 domain-containing protein,Unknown
+VFG035055,,(nleG8-2) DUF1076 domain-containing protein,Unknown
+VFG042849,,(pilE3/pilV) prepilin-type N-terminal cleavage/methylation domain-containing protein,Unknown
+VFG000342,,(hitA) iron ABC transporter substrate-binding protein,Unknown
+VFG013357,,(orfE) lipopolysaccharide biosynthesis protein,Unknown
+VFG013395,,(HI_RS05585*) phosphoethanolamine transferase,Unknown
+VFG013604,,(hgbA) TonB-dependent hemoglobin/transferrin/lactoferrin family receptor,Unknown
+VFG000281,,(cag2) type IV secretion system protein Cag2,Unknown
+VFG000319,,(wbpB) lipopolysaccharide biosynthesis protein,Unknown
+VFG006607,,(fliP) flagellar biosynthetic protein FliP,Unknown
+VFG006691,,(flgB) flagellar basal body rod protein FlgB,Unknown
+VFG045311,,(LPG_RS03785*) right-handed parallel beta-helix repeat-containing protein,Unknown
+VFG045322,,(LPG_RS03840*) glycosyltransferase family 2 protein,Unknown
+VFG002394,,(esxM) unknown protein,Unknown
+VFG000224,,(pilS) pilin,Unknown
+VFG000226,,(pilS) pilin,Unknown
+VFG000229,,(pilS) pilin,Unknown
+VFG000231,,(pilC) pilus assembly protein,Unknown
+VFG000248,,(lgtG) glycosyltransferase family 4 protein,Unknown
+VFG000251,,(siaD/synD) polysialic acid capsule biosynthesis protein SiaD; disrupted by foreign ermC cassette,Unknown
+VFG006217,,(opa) outer membrane beta-barrel protein,Unknown
+VFG000113,,(pilC) still frameshift type 4 fimbrial biogenesis protein PilC,Unknown
+VFG042884,,(pilN) PilN family type IVB pilus formation outer membrane protein,Unknown
+VFG002056,,(gspM) general secretion pathway protein M,Unknown
+VFG012865,,(ipaH) invasion plasmid antigen IpaH,Unknown
+VFG013066,,(shuW) heme anaerobic degradation radical SAM methyltransferase ChuW/HutW,Unknown
+VFG049900,,(tssM) Type VI secretion system protein TssM,Unknown
+VFG049904,,(clpV/tssH) Type VI secretion system ATPase ClpV/TssH,Unknown
+VFG049906,,(tssK) Type VI secretion system protein TssK,Unknown
+VFG049912,,(tssC) Type VI secretion system protein TssC,Unknown
+VFG001297,,(capA) capsular polysaccharide type 5/8 biosynthesis protein CapA,Unknown
+VFG005653,,(nanA) neuraminidase A,Unknown
+VFG042971,,(pitA) minor pilin PitA,Unknown
+VFG042975,,"(srtG2) surface protein cell wall anchor, sortase_B family",Unknown
