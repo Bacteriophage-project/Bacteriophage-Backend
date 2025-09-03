@@ -11,11 +11,14 @@ Parses assembly summaries into enriched metadata including organism names, GC co
 
 # Antimicrobial Resistance and Virulence Factor Analysis Integration:
 
-# ResFinder: Detects acquired antimicrobial resistance genes and chromosomal mutations associated with resistance, using a comprehensive and curated database.
+# ResFinder:
+Detects acquired antimicrobial resistance genes and chromosomal mutations associated with resistance, using a comprehensive and curated database.
 
-# Phastest: Planned integration for rapid identification of prophage sequences, which are important in bacterial evolution and virulence.
+# Phastest: 
+Planned integration for rapid identification of prophage sequences, which are important in bacterial evolution and virulence.
 
-# VFDB (Virulence Factor Database): Planned integration to detect bacterial virulence factors, enhancing analysis of pathogenic potential.
+# VFDB (Virulence Factor Database):
+Planned integration to detect bacterial virulence factors, enhancing analysis of pathogenic potential.
 
 # Consistent API Endpoints:
 Provides REST endpoints for fetching assemblies and for submitting genomes for resistance and virulence analyses.
